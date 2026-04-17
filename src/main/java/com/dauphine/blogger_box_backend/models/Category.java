@@ -16,7 +16,7 @@ public class Category {
     @Column(length = 100, unique = true)
     private String name;
 
-    // Optional: Enables bidirectional mapping so you can fetch a category's posts
+    
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnoreProperties("category")
     private List<Post> posts;
@@ -29,7 +29,7 @@ public class Category {
 
     }
 
-    // Getters and Setters
+    
     public UUID getId() {
         return id;
     }
