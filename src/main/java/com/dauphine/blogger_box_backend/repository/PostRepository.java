@@ -20,7 +20,7 @@ public interface PostRepository extends JpaRepository<Post, UUID> {
 
     List<Post> findAllByOrderByCreatedDateDesc();
 
-    // Automatically generates: SELECT * FROM post WHERE category_id = ?
+    
     List<Post> findByCategoryId(UUID categoryId);
 
 
