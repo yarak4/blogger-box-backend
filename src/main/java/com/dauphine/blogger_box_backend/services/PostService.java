@@ -36,7 +36,7 @@ public class PostService {
     }
 
     public Post createPost(String title, String content, UUID categoryId) {
-        // This will automatically throw CategoryNotFoundException if the ID is invalid
+        
         Category category = categoryService.getById(categoryId);
 
         Post post = new Post();
@@ -49,10 +49,10 @@ public class PostService {
     }
 
     public Post updatePost(UUID id, String title, String content, UUID categoryId) {
-        // 1. Validates the post exists (throws PostNotFoundException if not)
+        
         Post post = getById(id);
 
-        // 2. Validates the new category exists (throws CategoryNotFoundException if not)
+       
         Category category = categoryService.getById(categoryId);
 
         post.setTitle(title);
